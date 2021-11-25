@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    .cropper-container {
+      margin: 0 auto 20px auto;
+    }
+  </style>
+</head>
+<body class="container">
+  
+  <form id="cropper-form">
+    <div class="row">
+      <div class="col-12">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+      <!-- contents of this file will be placed inside the <body> -->
+        <div>
+          <input type="file" name="photo" accept="image/*" class="js-photo-upload">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <input type="text" name="hiddenImage" id="hiddenImage">
+      </div>
+    </div>
+
+  
+  <img id="avatar-crop" src="" style="width:271px; height:271px;">
+  
+  <div class="modal fade remove-modal" tabindex="-1" role="dialog" id="cropperModal">
+      <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <div class="modal-positioner">
+                  <h1>Crop Photo</h1>
+                  <hr>
+                  <img style="width: 271px; height: 271px;" class="js-avatar-preview" src="">
+                  <button class="btn btn-primary js-save-cropped-avatar">Save</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div class="row">
+
+    <div class="col-12">
+      <input type="button" value="Submit" name="submit">
+    </div>
+  </div>
+
+  </form>
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
